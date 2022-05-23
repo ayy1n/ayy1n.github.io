@@ -1,0 +1,59 @@
+:root{
+    --c1: white;
+    --c2: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tile {
+    position: relative;
+    background: var(--c2);
+    /* border: 1px solid yellow; */
+}
+
+.curve-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    background: var(--c1);
+}
+
+.top-left {
+    border-top-left-radius: 100%;
+}
+
+.top-right {
+    border-top-right-radius: 100%;
+}
+
+.bottom-left {
+    border-bottom-left-radius: 100%;
+}
+
+.bottom-right {
+    border-bottom-right-radius: 100%;
+}
+
+.ligature-h {
+    height: 3px;
+}
+
+.ligature-v {
+    width: 3px;
+}
+
+.gridform{
+    display: grid;
+    border: 1px solid green;
+    height: 400px;
+    width: 300px;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px;
+
+}
