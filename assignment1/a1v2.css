@@ -1,0 +1,110 @@
+
+
+.letter {
+    width:260px; /*resize as you see fit */
+    height:310px; /*resize as you see fit */
+    display:inline-block; 
+    border:1px solid blue; /*feel free to remove or hide this rule */
+    position:relative; /* IMPORTANT: any element with position:absolute inside this container will now be relative to bounds of this element; */
+}
+
+.gridform {
+    display: grid;
+    width: 250px;
+    height: 300px;
+    grid-template-columns: 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px;
+}
+
+.tile {
+    width: 50px;
+    height: 50px;
+    background:black;
+}
+
+.tile-line-top {
+    border-top: 2px solid black;
+}
+
+.tile-line-left {
+    border-left: 2px solid black;
+}
+
+.tile-line-bottom {
+    border-bottom: 2px solid black;
+}
+
+.triangle-inner-tl {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-top-left-radius: 100%;
+}
+
+.triangle-inner-bl {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-bottom-left-radius: 100%;
+}
+
+.triangle-inner-tr {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-top-right-radius: 100%;
+}
+
+.triangle-inner-br {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-bottom-right-radius: 100%;
+}
+
+.triangle-br {
+    /* width: 0;
+    height: 0;
+    border-bottom: 50px solid black;
+    border-left: 50px solid transparent; */
+
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-top-left-radius: 100%;
+  }
+
+.triangle-bl {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-top-right-radius: 100%;
+}
+
+.triangle-tr {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-bottom-left-radius: 100%;
+}
+
+.triangle-tl {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-bottom-right-radius: 100%;
+}
+
+.line-h {
+    border-top: 2px solid black;
+}
+
+.triangle-tl {
+    width: 0;
+    height: 0;
+    border-top: 50px solid black;
+    border-right: 50px solid transparent;
+}
+
+
+
