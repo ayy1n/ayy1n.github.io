@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flagSweden{
+    display: grid;
+    grid-template-columns: 250px 100px 450px;
+    grid-template-rows: 200px 100px 200px;
+}
+
+.flagDenmark{
+    display: grid;
+    grid-template-columns: 300px 100px 450px;
+    grid-template-rows: 300px 100px 300px;
+}
+
+.flagFinland{
+    display: grid;
+    grid-template-columns: 250px 100px 450px;
+    grid-template-rows: 200px 100px 200px;
+}
+
+.flagIceland{
+    display: grid;
+    grid-template-columns: 250px 25px 50px 25px 450px;
+    grid-template-rows: 200px 25px 50px 25px 200px;
+}
+
+.flagFrance{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 400px;
+}
+
+.red{
+    background-color: red;
+}
+
+.white{
+    background-color: white;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.yellow{
+    background-color: yellow;
+}
