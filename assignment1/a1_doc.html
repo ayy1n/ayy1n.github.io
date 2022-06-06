@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <link rel = "stylesheet" href = "../documentation.css">
+        <link rel= "stylesheet" href="https://use.typekit.net/kcr4lws.css">
+
+        <title>
+            A1 PROCESS
+        </title>
+    </head>
+
+    <body>
+        <div class = "main">
+            <h1>A1: CSS TYPEFACE</h1>
+
+            <p><a href = "a1.html">Click here</a> to view the page with all the final letters.</p>
+
+            <img src = "grid_tiles.png" style = "float:right; max-width: 30%">
+            
+            <h3>CONCEPT</h3>
+
+            <p>
+                Since this is going to be done in CSS, I figured the best way to approach it would be to use a grid. I didn't want to create an 8-bit/pixel font, so I had to brainstorm 
+                a way to break free from the grid in some way; or at least create the illusion of doing so. By combining full 'tiles' with the border-radius effect, I was able to create 
+                an array of different tiles that could be arranged to form letters without looking as blocky. You can see all the tiles to the right.
+            </p>       
+            <p>
+                The convex tiles were created with the aforementioned border-radius, targetting different corners of the divs, while the concave tiles were created by placing a div 
+                for a convex tile matching the page's background color on top of a full tile.
+            </p>
+            <div class = "clear"></div>
+
+            <h3>RESEARCH</h3>
+            <p> 
+                After getting an initial concept down, I decided to find inspiration through other designers' work, since I'm not familiar with type design. 
+                <a href = "https://www.behance.net/collection/194161037/typefaces">Here's a link to the Behance board</a> I created showcasing some fonts that were inspiring.
+            </p>
+
+            <h3>SKETCHING</h3>
+
+            <p>I started off with a rough design based on the research I did and sketched out some iterations with the help of a grid.</p>
+
+            <img src = "type_sketches_2.png">
+
+            <p>
+                The first 8 or so letters were sketched before I took a crack at actually creating them in a CSS grid, to just get a general 'look' for the font; I also included some 
+                of the sketches for 'tiles' I wanted that fell through since I couldn't find a great way to draw diagonal lines in CSS.
+            </p>
+
+            <p>
+                I continued with the rest of the font after working through the first pass of the initial letters, this time sticking to only arranging with the tiles I created.
+            </p>
+
+            <h3>FIRST PASS</h3>
+
+            <img src = "Screenshot 2022-06-06 122958.png">
+
+            <p>
+                The first pass, I was pretty happy with the look of the typeface and the plan on sticking through with this style for the rest of it. Some of the issues I ran into were 
+                that the wav the concave tips connected to others letters; it tapered off into a complete 0, which means it looked a little too wispy/not structurally sound for my 
+                liking. To fix this, I added a couple new div classes that just added bordered lines 2px thick to create the thin lines.
+            </p>
+
+            <p>
+                There was still a bit of jankiness with the placement of some crossbars, the thin lines, the inner curves etc... but overall it looked good.
+            </p>
+
+            <h3>FINAL PASS</h3>
+
+            <p>
+                As I was working, I filled out all the letters, and I had some minor issues with tiles not lining up perfectly due to the nature of the bordered lines. I solved these 
+                problems with careful placement of the border lines, and I made sure that i was using variables for the colours so I could change them easily for the typographic 
+                poster afterwards (they have a green colour right now because I'm sharing the CSS file, but originally I worked in black and white).
+            </p>
+
+            <p>
+                I added some small interactivity with hover effects, and done!
+            </p>
+
+            <img src = "Screenshot 2022-06-06 123854.png">
+
+            <p>
+                Or so I thought... After using this layout and putting it into practice on the website, something just didn't look quite right. I slept on it, and then I realized it's 
+                because I started getting a little too crazy with the intricate details by putting convex and concave tiles next to each other, and some letters just didn't fit with 
+                the rest of them. So, I simplified things, and redid a couple of the edges, and it looks much more cohesive.
+            </p>
+
+            <img src = "final.png">
+
+        </div>
+    </body>
+</html>

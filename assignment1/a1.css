@@ -1,59 +1,143 @@
-:root{
-    --c1: white;
-    --c2: black;
-}
-
-* {
-    margin: 0;
-    padding: 0;
+*{
     box-sizing: border-box;
 }
 
+:root{
+    --c1: #f8faee;
+    --c2: #606c38;
+    --s: 25px;
+    transition: 0.2s;
+}
+
+.letter {
+    width:var(--s)*5; /*resize as you see fit */
+    height:var(--s)*6; /*resize as you see fit */
+    display:inline-block; 
+    /* border:1px solid blue;  */
+    position:relative; /* IMPORTANT: any element with position:absolute inside this container will now be relative to bounds of this element; */
+    opacity: 0.9;
+    transition: 0.2s;
+    padding: 5px;
+    bottom:0px;
+}
+
+/* on hover, change all of the main body colour */
+.letter:hover{
+    opacity: 1;
+    --c2: #283618;
+    bottom: 10px;
+}
+
+.gridform {
+    display: grid;
+    background-color: #f8faee;
+    width: var(--s)*5;
+    height: var(--s)*6;
+    grid-template-columns: var(--s) var(--s) var(--s) var(--s) var(--s);
+    grid-template-rows: var(--s) var(--s) var(--s) var(--s) var(--s) var(--s);
+}
+
+/* exceptions for I, M, W */
+.three-wide {
+    grid-template-columns: var(--s) var(--s) var(--s);
+}
+
+.seven-wide {
+    grid-template-columns: var(--s) var(--s) var(--s) var(--s) var(--s) var(--s) var(--s);
+}
+
+.letter-i {
+    width: var(--s)*3;
+}
+
+.letter-m, .letter-w {
+    width: var(--s)*7;
+}
+
+/* fully filled in tile */
 .tile {
-    position: relative;
+    width: var(--s);
+    height: var(--s);
     background: var(--c2);
-    /* border: 1px solid yellow; */
 }
 
-.curve-inner {
+/* all lines */
+.tile-line-top {
+    border-top: 2px solid var(--c2);
+}
+
+.tile-line-left {
+    border-left: 2px solid var(--c2);
+}
+
+.tile-line-right {
+    border-right: 2px solid var(--c2);
+}
+
+.tile-line-bottom {
+    border-bottom: 2px solid var(--c2);
+}
+
+/* concave triangles */
+
+.triangle-inner-tl {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 50px;
-    width: 50px;
-    background: var(--c1);
-}
-
-.top-left {
+    width: var(--s);
+    height: var(--s);
+    background-color: var(--c1);
     border-top-left-radius: 100%;
 }
 
-.top-right {
-    border-top-right-radius: 100%;
-}
-
-.bottom-left {
+.triangle-inner-bl {
+    position: absolute;
+    width: var(--s);
+    height: var(--s);
+    background-color: var(--c1);
     border-bottom-left-radius: 100%;
 }
 
-.bottom-right {
+.triangle-inner-tr {
+    position: absolute;
+    width: var(--s);
+    height: var(--s);
+    background-color: var(--c1);
+    border-top-right-radius: 100%;
+}
+
+.triangle-inner-br {
+    position: absolute;
+    width: var(--s);
+    height: var(--s);
+    background-color: var(--c1);
     border-bottom-right-radius: 100%;
 }
 
-.ligature-h {
-    height: 3px;
+/* convex triangles */
+
+.triangle-br {
+    width: var(--s);
+    height: var(--s);
+    background-color: var(--c2);
+    border-top-left-radius: 100%;
+  }
+
+.triangle-bl {
+    width: var(--s);
+    height: var(--s);
+    background-color: var(--c2);
+    border-top-right-radius: 100%;
 }
 
-.ligature-v {
-    width: 3px;
+.triangle-tr {
+    width: var(--s);
+    height: var(--s);
+    background-color: var(--c2);
+    border-bottom-left-radius: 100%;
 }
 
-.gridform{
-    display: grid;
-    border: 1px solid green;
-    height: 400px;
-    width: 300px;
-    grid-template-columns: 50px 50px 50px 50px 50px 50px;
-    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px;
-
+.triangle-tl {
+    width: var(--s);
+    height: var(--s);
+    background-color: var(--c2);
+    border-bottom-right-radius: 100%;
 }
