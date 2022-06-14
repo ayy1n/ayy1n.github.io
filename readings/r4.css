@@ -1,0 +1,32 @@
+.main {
+    width: 70%;
+    margin: auto;
+
+    display: grid;
+    background-image: url(https://images.unsplash.com/photo-1629968417850-3505f5180761?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cGFwZXIlMjB0ZXh0dXJlfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 90vh;
+}
+
+.pageLeft {
+    padding: 30px;
+    border: 2px solid black;
+    border-right-width: 1px;
+}
+
+h2 {
+    padding-top: 40vh;
+    padding-bottom: 10px;
+    font-family: Helvetica;
+    font-size: 30px;
+}
+
+p {
+    padding-bottom: 10px;
+    font-family: Garamond;
+}
+
+.pageRight {
+    border: 2px solid black;
+    border-left-width: 1px;
+}
