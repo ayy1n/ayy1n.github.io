@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    position: relative;
+    /* width: 100px;
+    height: 100px;     */
+    cursor: grab;
+    transition-duration: 0.2s;
+    overflow: hidden;
+    background: #ccc;
+}
+
+img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+
+p { 
+    text-align: center; 
+    font-size: 50px;
+    margin: 10px; 
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
+    /* grid-template-columns: repeat(auto-fill, fit-content);
+    grid-template-rows: repeat(auto-fill, fit-content); */
+}
+
+.extra {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background: blue;
+}
+
+.shadow{
+    /* pushes div to the front so the shadow shows all around it, scales up slightly */
+    z-index: 1;
+
+    /* adds shadow */
+    -webkit-box-shadow:0 0 20px black; 
+    -moz-box-shadow: 0 0 20px black; 
+    box-shadow:0 0 20px black;
+ }
+
+ .blue{
+    background-color: blue;
+ }
+
+#test {
+    width: 200px;
+    height: 200px;
+    overflow: auto;
+}
+
