@@ -12,22 +12,91 @@
 
     <body>
         <div class = "main">
-            <h1>A3:INTERACTIVE WEBSITE</h1>
+            <h1>A3:INTERACTIVE WEBSITE (RESIZE)</h1>
 
             <p><a href = "a3.html">Click here</a> to view the final site.</p>
 
+            <p><i>
+                My final site is a colourful, single-serve website that allows the user to generate gradients based on the width and height of the box it's contained in. Some of the 
+                aesthetic inspiration includes colour palette generators, pantone colour cards, neon lights.
+            </i></p>
+
             <h3>RESEARCH</h3>
             <p> 
-                I had trouble getting an idea for this project, and I looked at a lot of 
-            </p>           
+                I had trouble getting an idea for this project by trying to find inspiration directly from are.na or instagram. Instead, I looked 
+                back on some of the examples that were shown in class, along with a handful of other single-serve sites from last semester that I remembered. This one in particular, from the 
+                typographic website pdf, stuch out to me. 
+            </p>    
+            
+            <img src = "process_pics/Screenshot 2022-06-16 021106.png">
 
-            <h3>CONCEPT</h3>
             <p>
-                I decided to mock up the website in Indesign before moving on with the actual coding. I started with a widescreen base and played around with a couple of iterations until I 
-                found something I was pretty happy with. The feedback was very helpful as well, and helped me push the concept along a little better in practice. 
+                I love how bright the colours are and how the copy is jarring to look at, and it's very 'in your face'. I took some inspiration from that and, thinking of my prompt, 
+                figured I could build a grid system and resize the tiles around.
+            </p>
+
+            <h3>INITIAL CONCEPT</h3>
+            <p>
+                My first idea was something akin to Mad-Libs, where I would have a bunch of copy in these tiles that the user could resize and drag around to get the word/letters of their 
+                choosing, and it would have a sort of ransom note quality to it. Alternatively, I'd lean into the 'scrapbook' concept and insert a lot of photographs/paintings, allowing the 
+                user to resize and crop those to their liking into a collage.
             </p>       
 
-           
+            <h3>PROTOTYPE PROCESS</h3>
+            <p>
+                First thing was to implement divs with the ability to resize, couresty of the jqueryUI library.
+            </p>
+            <p>
+                I knew that I was going to use a grid, table, or a flexbox or some kind to organize all my elements. I started off experimenting a bit with each, getting attached to the idea 
+                of the flexbox, but issues kept cropping up over and over that I thought would be easy to deal with.
+            </p>
+
+            <img src = "process_pics/Screenshot 2022-06-15 153607.png">
+            <img src = "process_pics/Screenshot 2022-06-15 161825.png">
+
+            <p>
+                One of the biggest problems I had was finding a way to resize all elements in line with the current element so they would share the same width; there were so many 
+                unexpected issues, and weird ways I tried to fix it; i.e. using a variable to store the current div's width, then setting each div with the same x-position's css to have the 
+                same width... It didn't really work.
+            </p>
+
+            <p>
+                I spent a long time just trying to troubleshoot.
+            </p>
+            <img src = "process_pics/Screenshot 2022-06-15 170317.png">
+
+            <p> I did, eventually, figure out how to fix that height issue after scouring the internet for hours and studying up on a lot of jquery nomenclature!</p>
+            <img src = "process_pics/Screenshot 2022-06-16 001805.png">
+
+            <h3>SCRAPPING, FIXING, REDOING</h3>
+
+            <p>
+                I then ran into a second issue, where any text I placed inside the box wouldn't wrap properly, and the div wouldn't shrink any further than the longest word in that box. 
+                That kind of ruined the whole 'mad libs' idea and it was very frustrating, I tried everything from overflow: hidden, to white-space: nowrap, etc... but nothing seemed to 
+                work. After some testing I figured out that it was because of the way I was nesting my divs, but at this point I had no idea how to fix the issue without unsolving the 
+                height issue, so I thought about other ways I could take this project with the base I had.
+            </p>
+
+            <img src = "process_pics/Screenshot 2022-06-16 005744.png">
+
+            <p> 
+                After staring enough at the colours on the screen and thinking back to p5.js I learned last semester, I went with changing the colour of the boxes based on resizing. And 
+                it worked like a charm.
+            </p>
+
+            <img src = "process_pics/Screenshot 2022-06-16 014738.png">
+
+            <p>
+                It looked a little flat, so I decided to add a second hue with a different mapping for the bottom of a gradient. This really helped with the visual appeal and gave the user 
+                a lot more room to play around with getting different results.
+            </p>
+
+            <p>
+                For final details, I added some intro text that fades out once the user resizes their first box (just in case), and I made sure that all of my divs looked good no matter the 
+                size of the viewport. I used percentages and viewport height liberally to achieve this. As a closing thought, I'd love to make the handles bigger, but every time I tried 
+                resizing them to make it easier for people to grab them, it just wouldn't work. I'll have to look into that more later.
+            </p>
+            
         </div>
     </body>
 </html>

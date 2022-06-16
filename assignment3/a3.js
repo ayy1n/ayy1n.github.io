@@ -54,7 +54,7 @@ $(document).ready(function(){
             var lum = map(height, 100, 800, 50, 90);
 
             // $(this).find(".content").css("background-color", "hsl("+hue+", 100%, "+lum+"%)");
-            $(this).find(".content").css("background", "linear-gradient(hsl("+hue+", 100%, "+lum+"%), hsl("+hue2+", 100%, 50%))");
+            $(this).find(".content").css("background", "linear-gradient(hsl("+hue+", 100%, "+lum+"%), hsl("+hue2+", 100%, "+lum+"%))");
         });
 
     });
@@ -62,6 +62,9 @@ $(document).ready(function(){
     // remove the shadow once we stop resizing
     $(".row td").on("resizestop", function(event, ui){
         $(this).find(".content").removeClass("shadow");
+
+        // remove the intro text
+        $(".intro").fadeOut();
     });
 
 

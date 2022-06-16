@@ -48,10 +48,17 @@ body {
     box-shadow:0 0 20px black;
  }
 
-.ui-resizable-se {
-    background: black;
-    width: 100px;
-    height: 100px;
+.intro {
+    position: fixed;
+    top: 45vh;
+    left: 20px;
+    width: 50%;
+
+    /* so it doesn't get in the way of resizing */
+    pointer-events: none;
+    z-index: 100;
+    font-size: 20px;
+    font-family: botanika-mono-web,monospace;
 }
 
  /* mostly for testing purposes */
