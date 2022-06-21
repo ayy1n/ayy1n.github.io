@@ -1,0 +1,209 @@
+/* UI Style Guide Demo */
+
+:root {
+	--black: #393D3F;
+	--white: #E8E9EB;
+	--coral: #EE7674;
+	--ice: #7F96FF;
+	--blue: #007AF5;
+}
+
+/* Add spacing below header tags */
+h1, h2, h3 {
+	margin-bottom:  24px;
+}
+
+/* Style div as circle */
+.ui-color {
+	width:  88px;
+	height:  88px;
+	border-radius:  50%;
+}
+
+/* Position hexcode centre to circle color */
+.ui-text {
+	font-family: allotrope, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	color: gray;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.ui-text h1 {
+	font-family: allotrope, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 50px;
+	color: gray;
+	border-bottom: 1px solid gray;
+}
+
+.ui-text h2 {
+	font-family: allotrope, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 30px;
+	color: gray;
+	border-bottom: 1px solid gray;
+}
+
+/* Display colors next to one another and add spacing to the right side */
+.ui-colors-primary div, .ui-colors-secondary div {
+	display:  inline-block;
+	padding-right: 15px;
+}
+
+/* Remove padding on last color element */
+.ui-colors-primary div:last-child, .ui-colors-secondary div:last-child {
+	padding-right: 0;
+}
+
+/* UI Colors */
+.ui-colors-primary-black {
+	background-color: var(--black);
+}
+
+.ui-colors-primary-white {
+	background-color: var(--white);
+}
+
+.ui-colors-primary-coral {
+	background-color: var(--coral);
+}
+
+.ui-colors-primary-ice {
+	background-color: var(--ice);
+}
+
+.ui-colors-primary-blue {
+	background-color: var(--blue);
+}
+
+/* TYPOGRAPHY */
+
+h1 {
+	color: var(--black);
+	font-family: monotalic, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 120px;
+}
+
+h2 {
+	color: var(--black);
+	font-family: monotalic, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 48px;
+}
+
+h3 {
+	color: var(--black);
+	font-family: monotalic, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 30px;
+}
+
+h4 {
+	color: var(--black);
+	font-family: botanika-web, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	font-size: 18px;
+}
+
+p {
+	color: var(--black);
+	font-family: botanika-web, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 18px;
+}
+
+a {
+	color: var(--blue);
+	font-family: botanika-web, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 18px;
+}
+
+a:hover {
+	color: var(--coral);
+}
+
+/* BUTTONS */
+
+button {
+	font-family: monotalic, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 24px;
+	text-align: center;
+
+	border-radius: 50px;
+	padding: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 10px;
+	transition: 0.1s;
+}
+
+.b1 {
+	color: var(--blue);
+	background-color: var(--white);
+	border: 2px solid var(--blue);	
+}
+
+.b1:hover {
+	color: var(--coral);
+	background-color: var(--white);
+	border: 2px solid var(--coral);	
+	transform: scale(1.05);
+}
+
+.b2 {
+	color: var(--white);
+	background-color: var(--blue);
+	border: 2px solid var(--white);	
+}
+
+.b2:hover {
+	color: var(--white);
+	background-color: var(--coral);
+	border: 2px solid var(--white);	
+	transform: scale(1.05);
+}
+
+.b3 {
+	color: var(--black);
+	background-color: var(--white);
+	border: 2px solid var(--black);	
+}
+
+.b3:hover {
+	color: var(--ice);
+	background-color: var(--white);
+	border: 2px solid var(--ice);	
+	transform: scale(1.05);
+}
+
+/* INPUTS/FORMS */
+
+input[type=text] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 2px solid var(--ice);	
+	border-radius: 50px;
+	box-sizing: border-box;
+	transition-duration: 0.1s;
+}
+
+input[type=text]:focus {
+	border: 2px solid var(--blue);	
+}
