@@ -1,0 +1,362 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    background-color: var(--white);
+}
+
+:root {
+	--black: #393D3F;
+	--white: #E8E9EB;
+	--coral: #EE7674;
+	--ice: #7F96FF;
+	--blue: #007AF5;
+    --blue-t: #007AF550;
+}
+
+/* NAVBAR */
+
+#topnav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 10px;    
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--white);
+    border-bottom: 2px solid var(--blue);
+    transition-duration: 0.4s;
+    box-shadow: var(--blue-t) 0px 2px 4px 0px, var(--blue-t) 0px 2px 16px 0px;
+}
+
+li {
+    list-style: none;
+}
+
+.topnav-right {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topnav-hover {
+    background-color: var(--blue);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    /* -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; */
+    background-color: var(--blue);
+    transition-duration: 0.3s;
+}
+
+/* 80% width box */
+
+.w80 {
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* TITLE BOX */
+
+.title {
+    position: fixed;
+    top: 250px;
+    z-index: -100;
+}
+
+/* ACTS */
+#act-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40vh;
+    column-gap: 16px;
+
+    margin-top: 90vh;
+    margin-bottom: 100px;
+    transition-duration: 0.2s;
+}
+
+.act {
+    position: relative;
+    padding: 20px;
+}
+
+.act1 {
+    box-shadow: var(--blue-t) 0px 2px 4px 0px, var(--blue-t) 0px 2px 16px 0px;
+    transition-duration: 0.2s;
+}
+
+.act1-hover {
+    background-image: url("../../assignment1/type_sketches_1.png");
+}
+
+.act2 {
+    box-shadow: var(--blue-t) 0px 2px 4px 0px, var(--blue-t) 0px 2px 16px 0px;
+    transition-duration: 0.2s;
+}
+
+/* div for the background image of each act */
+.act-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+}
+
+/* styling the background image */
+.act-bg img {
+    max-height: 40vh;
+    object-fit: none;   
+    transform-origin: center;
+    transform: scale(1.03);
+    transition-duration: 0.2s;
+}
+
+/* filter will be removed on hover */
+.act-filter {
+    filter: grayscale(100%) blur(5px) brightness(180%);
+}
+
+.act-buttons {
+    /* positions buttons in the bottom right corner of the act box */
+    position: absolute;
+    margin: 20px;
+    bottom: 0;
+    right: 0;
+}
+
+/* EXERCISES&READINGS */
+.w100 {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    border-top: 2px solid var(--blue);
+    transition-duration: 0.2s;
+}
+
+.w100:hover {
+    z-index: 10;
+    box-shadow: var(--blue-t) 0px 2px 4px 0px, var(--blue-t) 0px 2px 16px 0px;
+}
+
+.exercise {
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    background-color: var(--white);
+}
+
+.exercise-descriptor {
+    float: right;
+}
+
+/* INDEX PROCESS */
+.index-image {
+    width: 60%;
+    margin: auto;
+    float: right;
+    background: blue;
+    height: 500px;
+}
+
+#exercise-text {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+button {
+    font-family: roboto-mono, monospace;
+    font-weight: 400;
+    font-style: normal;
+	font-size: 24px;
+	text-align: center;
+
+	border-radius: 50px;
+	padding: 8px;
+	padding-left: 20px;
+	padding-right: 20px;
+    margin-left: 10px;
+	transition-duration: 0.2s;
+}
+
+.b1 {
+	color: var(--blue);
+	background-color: var(--white);
+	border: 2px solid var(--blue);	
+}
+
+.b1:hover {
+	color: var(--coral);
+	background-color: var(--white);
+	border: 2px solid var(--coral);	
+    cursor: pointer;
+	transform: scale(1.05);
+    box-shadow: var(--blue-t) 0px 2px 4px 0px, var(--blue-t) 0px 2px 16px 0px;
+}
+
+.b2 {
+    font-size: 20px;
+	color: var(--blue);
+	background-color: var(--white);
+	border: 2px solid var(--blue);	
+}
+
+.b2:hover {
+	color: var(--coral);
+	background-color: var(--white);
+	border: 2px solid var(--coral);	
+    cursor: pointer;
+	transform: scale(1.05);
+    box-shadow: var(--blue-t) 0px 2px 4px 0px, var(--blue-t) 0px 2px 16px 0px;
+}
+
+/* FONTS */
+h1 {
+    color: var(--blue);
+    font-family: roboto-mono, monospace;
+    font-weight: 700;
+    font-style: normal;
+	font-size: 15vw;
+    line-height: 80%;
+    transition-duration: 0.2s;
+}
+
+h2 {
+	color: var(--blue);
+    font-family: roboto-mono, monospace;
+    font-weight: 700;
+    font-style: normal;
+	font-size: 42px;
+    transition-duration: 0.2s;
+}
+
+h3 {
+	color: var(--black);
+    font-family: roboto-mono, monospace;
+    font-weight: 700;
+    font-style: normal;
+	font-size: 24px;
+    transition-duration: 0.2s;
+}
+
+p {
+    color: var(--blue);
+    font-family: roboto-mono, monospace;
+    font-weight: 400;
+    font-style: normal;
+	font-size: 20px;
+    transition-duration: 0.2s;
+}
+
+.logo {
+    float: left;
+    text-decoration: none;
+    margin-top: 5px;
+    transition-duration: 0.2s;
+}
+
+.logo:hover h2 {
+    color: var(--white);
+}
+
+.bar-hover {
+    background-color: var(--coral);
+    box-shadow: var(--blue-t) 0px 2px 4px 0px, var(--blue-t) 0px 2px 16px 0px;
+}
+
+/* FOR MOBILE SCREEN SIZES */
+@media screen and (max-width: 750px) {
+
+    /* FONTS */
+    h1 {
+        font-size: 64px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    /* GRID */
+    #act-grid {
+        grid-template-columns: 100%;
+        grid-template-rows: 200px 200px;
+        row-gap: 16px;
+    }
+
+    .act-bg img {
+        max-height: 200px;
+    }
+
+}
+
+@media screen and (max-width: 1000px){
+
+    /* BUTTON */
+    button {
+        font-size: 18px;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+
+    .topnav-right {
+        position: fixed;
+        top: 75px;
+        left: 50%;
+        gap: 0;
+        flex-direction: column;
+        /* background-color: var(--blue); */
+        width: 100%;
+        padding: 10px;
+        text-align: right;
+        transition: 0.3s;
+    }
+
+    .topnav-right button {
+        margin: 5px;
+    }
+
+    .topnav-active {
+        left: 0px;
+    }
+
+    .hamburger-active {
+        transform: scaleY(1.7);
+    }
+}
