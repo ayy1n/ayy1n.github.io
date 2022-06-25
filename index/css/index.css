@@ -146,6 +146,7 @@ li {
     /* positions buttons in the bottom right corner of the act box */
     position: absolute;
     margin: 20px;
+    text-align: right;
     bottom: 0;
     right: 0;
 }
@@ -175,7 +176,18 @@ li {
     float: right;
 }
 
+#exercise-text {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
 /* INDEX PROCESS */
+
+.index {
+    height: 50vh;
+}
+
 .index-image {
     width: 60%;
     margin: auto;
@@ -184,10 +196,29 @@ li {
     height: 500px;
 }
 
-#exercise-text {
+#process-text {
+    position: absolute;
+    width: 60%;
+    margin: auto;
+    float: left;
+
+    padding-top: 200px;
+}
+
+/* RESOURCES */
+
+.resources {
+    border-top: 2px solid var(--blue);
+}
+
+#resources-text {
     width: 80%;
     margin: auto;
-    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.resource-grid {
+    display: flex;
 }
 
 /* BUTTON */
@@ -195,7 +226,7 @@ button {
     font-family: roboto-mono, monospace;
     font-weight: 400;
     font-style: normal;
-	font-size: 24px;
+	font-size: 20px;
 	text-align: center;
 
 	border-radius: 50px;
@@ -223,12 +254,27 @@ button {
 
 .b2 {
     font-size: 20px;
+	color: var(--white);
+	background-color: var(--blue);
+	border: 2px solid var(--blue);	
+}
+
+.b2:hover {
+	color: var(--white);
+	background-color: var(--coral);
+	border: 2px solid var(--coral);	
+    cursor: pointer;
+	transform: scale(1.05);
+    box-shadow: var(--blue-t) 0px 2px 4px 0px, var(--blue-t) 0px 2px 16px 0px;
+}
+
+.b3 {
 	color: var(--blue);
 	background-color: var(--white);
 	border: 2px solid var(--blue);	
 }
 
-.b2:hover {
+.b3:hover {
 	color: var(--coral);
 	background-color: var(--white);
 	border: 2px solid var(--coral);	
@@ -322,13 +368,21 @@ p {
         max-height: 200px;
     }
 
+    .exercise {
+        width: 90%;
+        margin: auto;
+    }
+
 }
 
 @media screen and (max-width: 1000px){
 
     /* BUTTON */
     button {
-        font-size: 18px;
+        font-size: 16px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     
     .hamburger {
@@ -338,14 +392,14 @@ p {
     .topnav-right {
         position: fixed;
         top: 75px;
-        left: 50%;
+        left: 100%;
         gap: 0;
         flex-direction: column;
         /* background-color: var(--blue); */
         width: 100%;
         padding: 10px;
         text-align: right;
-        transition: 0.3s;
+        transition: 0.4s;
     }
 
     .topnav-right button {
@@ -358,5 +412,21 @@ p {
 
     .hamburger-active {
         transform: scaleY(1.7);
+    }
+
+    .b3 {
+        font-size: 20px;
+        color: var(--white);
+        background-color: var(--blue);
+        border: 2px solid var(--blue);	
+    }
+    
+    .b3:hover {
+        color: var(--white);
+        background-color: var(--coral);
+        border: 2px solid var(--coral);	
+        cursor: pointer;
+        transform: scale(1.05);
+        box-shadow: var(--blue-t) 0px 2px 4px 0px, var(--blue-t) 0px 2px 16px 0px;
     }
 }

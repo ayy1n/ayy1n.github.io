@@ -34,6 +34,7 @@ $(document).ready(function(){
 
     $(".topnav-right").click(function(){
       $(this).removeClass("topnav-active");
+      $(".bar").removeClass("hamburger-active");
     })
 
   var prevScrollpos = window.pageYOffset;
