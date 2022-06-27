@@ -10,15 +10,16 @@ html {
 
 body {
     background-color: var(--white);
+    overflow-x: hidden;
 }
 
 :root {
-	--black: #393D3F;
-	--white: #E8E9EB;
-	--coral: #EE7674;
-	--ice: #7F96FF;
-	--blue: #007AF5;
-    --blue-t: #007AF550;
+	--black: #9DD9D2;
+	--white: #F9F9F9;
+	--coral: #FF8811;
+	--ice: #F4D06F;
+	--blue: #392F5A;
+    --blue-t: #392F5A50;
 }
 
 /* NAVBAR */
@@ -81,9 +82,32 @@ li {
 /* TITLE BOX */
 
 .title {
-    position: fixed;
+    position: absolute;
     top: 250px;
     z-index: -100;
+    transition-duration: 0.7s;
+    animation: fade ease 2s; 
+
+    background-color: var(--coral);
+    background: linear-gradient(45deg, var(--coral), var(--ice));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        top: 0;
+        transform: rotate(10deg);
+    }
+    100% {
+        opacity: 1;
+        top: 250px;
+        transform: rotate(0deg);
+     }
 }
 
 /* ACTS */
@@ -93,7 +117,7 @@ li {
     grid-template-rows: 40vh;
     column-gap: 16px;
 
-    margin-top: 90vh;
+    margin-top: 50vw;
     margin-bottom: 100px;
     transition-duration: 0.2s;
 }
@@ -106,10 +130,6 @@ li {
 .act1 {
     box-shadow: var(--blue-t) 0px 2px 4px 0px, var(--blue-t) 0px 2px 16px 0px;
     transition-duration: 0.2s;
-}
-
-.act1-hover {
-    background-image: url("../../assignment1/type_sketches_1.png");
 }
 
 .act2 {
@@ -130,7 +150,7 @@ li {
 
 /* styling the background image */
 .act-bg img {
-    max-height: 40vh;
+    /* max-width: 200%; */
     object-fit: none;   
     transform-origin: center;
     transform: scale(1.03);
@@ -139,7 +159,7 @@ li {
 
 /* filter will be removed on hover */
 .act-filter {
-    filter: grayscale(100%) blur(5px) brightness(180%);
+    filter: blur(5px);
 }
 
 .act-buttons {
@@ -158,6 +178,7 @@ li {
     width: 100%;
     border-top: 2px solid var(--blue);
     transition-duration: 0.2s;
+    backdrop-filter: blur(8px);
 }
 
 .w100:hover {
@@ -169,7 +190,7 @@ li {
     padding: 10px;
     width: 80%;
     margin: auto;
-    background-color: var(--white);
+    /* background-color: var(--white); */
 }
 
 .exercise-descriptor {
@@ -188,43 +209,59 @@ li {
     height: 50vh;
 }
 
-.index-image {
+.index-image img {
     width: 60%;
     margin: auto;
     float: right;
-    background: blue;
+    background: white;
     height: 500px;
+    object-fit: cover;
+    filter: blur(5px);
+    mix-blend-mode: multiply;
 }
 
 #process-text {
     position: absolute;
-    width: 60%;
+    width: 40%;
     margin: auto;
     float: left;
 
-    padding-top: 200px;
+    padding-top: 160px;
+    padding-bottom: 200px;
 }
 
 /* RESOURCES */
 
 .resources {
     border-top: 2px solid var(--blue);
+    box-shadow: var(--blue-t) 0px 2px 4px 0px, var(--blue-t) 0px 2px 16px 0px;
 }
 
 #resources-text {
     width: 80%;
     margin: auto;
     margin-top: 20px;
+    padding-bottom: 30px;
 }
 
 .resource-grid {
     display: flex;
+    flex-wrap: wrap;
+}
+
+.resource-box {
+    width: 25%;
+    padding: 10px;
+}
+
+.resource-box a h3:hover {
+    color: var(--coral);
 }
 
 /* BUTTON */
 button {
-    font-family: roboto-mono, monospace;
-    font-weight: 400;
+    font-family: letter-gothic-std, monospace;
+    font-weight: 700;
     font-style: normal;
 	font-size: 20px;
 	text-align: center;
@@ -234,6 +271,8 @@ button {
 	padding-left: 20px;
 	padding-right: 20px;
     margin-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 	transition-duration: 0.2s;
 }
 
@@ -260,7 +299,7 @@ button {
 }
 
 .b2:hover {
-	color: var(--white);
+	color: var(--blue);
 	background-color: var(--coral);
 	border: 2px solid var(--coral);	
     cursor: pointer;
@@ -285,8 +324,8 @@ button {
 
 /* FONTS */
 h1 {
-    color: var(--blue);
-    font-family: roboto-mono, monospace;
+    color: var(--ice);
+    font-family: gopher, sans-serif;
     font-weight: 700;
     font-style: normal;
 	font-size: 15vw;
@@ -296,7 +335,7 @@ h1 {
 
 h2 {
 	color: var(--blue);
-    font-family: roboto-mono, monospace;
+    font-family: gopher, sans-serif;
     font-weight: 700;
     font-style: normal;
 	font-size: 42px;
@@ -305,7 +344,7 @@ h2 {
 
 h3 {
 	color: var(--black);
-    font-family: roboto-mono, monospace;
+    font-family: gopher, sans-serif;
     font-weight: 700;
     font-style: normal;
 	font-size: 24px;
@@ -314,8 +353,8 @@ h3 {
 
 p {
     color: var(--blue);
-    font-family: roboto-mono, monospace;
-    font-weight: 400;
+    font-family: letter-gothic-std, monospace;
+    font-weight: 700;
     font-style: normal;
 	font-size: 20px;
     transition-duration: 0.2s;
@@ -359,13 +398,15 @@ p {
 
     /* GRID */
     #act-grid {
+        margin-top: 450px;
         grid-template-columns: 100%;
         grid-template-rows: 200px 200px;
         row-gap: 16px;
     }
 
     .act-bg img {
-        max-height: 200px;
+        width: 100%;
+        height: 200px;
     }
 
     .exercise {
@@ -383,6 +424,10 @@ p {
         padding: 5px;
         padding-left: 10px;
         padding-right: 10px;
+    }
+
+    .b2 {
+        font-size: 14px;
     }
     
     .hamburger {
@@ -428,5 +473,13 @@ p {
         cursor: pointer;
         transform: scale(1.05);
         box-shadow: var(--blue-t) 0px 2px 4px 0px, var(--blue-t) 0px 2px 16px 0px;
+    }
+
+    .resource-box {
+        width: 50%;
+    }
+    
+    #process-text {
+        width: 70%;
     }
 }

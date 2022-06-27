@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <link rel = "stylesheet" href = "../documentation.css">
+        <link rel= "stylesheet" href="https://use.typekit.net/kcr4lws.css">
+
+        <title>
+            Readings
+        </title>
+    </head>
+
+    <body>
+        <div class = "main">
+            <h1>INDEX PROCESS</h1>
+
+            <p><a href = "main.html">Click here</a> to view the final index.</p>
+
+            <h3>RESEARCH</h3>
+            <p>
+                The first thing I did was look at successful portfolio/index sites and see what made them feel so engaging. I spent a lot of time on awwwards examining websites and noting down interesting interaction they had, and how they managed to make their websites responsive.
+            </p>
+
+            <p>
+                Since I was just going to create a simple one-page index file, and it didn't have to be super corporate-looking, I could have some fun with the layout (even if it wasn't optimal for accessibility).
+            </p>
+            
+            <h3>WIREFRAME</h3>
+            <p>
+                I popped into Figma and quickly mocked up some wireframes for my site. I started with the mobile mockup, since I figured that it would be easier to adapt a mobile design to a desktop rather than vice versa.
+            </p>
+            <img src="../Screenshot 2022-06-27 104617.png">
+
+            <h3>UI STYLE GUIDE</h3>
+            <p>
+                For exercise 6, we had to put together a UI style guide. I did so with some general idea of what I wanted the overall site to look like, but without actually trying out different styles/colours on the Figma mockup. This was my mistake for not making a higher fidelity mockup, because in the end, my site turned out to look nothing like the UI style I had put together. 
+            </p>
+            <p>
+                But it was still a good thing to try out, because now I know what to do in the future. Also, I used variables for the colourscheme, so changing things around wasn't that difficult. I think making the fonts variables as well would've been a good idea.
+            </p>
+
+            <h3>BASE SITE</h3>
+            <p>
+                I first made a basic working skeleton of the website, with divs in the right location and the correct spacing/padding. This looked very similar to the wireframe, with everything in black and white. From there I added some small interaction effects, including things like adding a bunch of hover effects (like shadows, so the div you're hovering over pops out), and having all buttons change color and scale up slightly.
+            </p>
+
+            <h3>RESPONSIVITY</h3>
+            <p>
+                One of the biggest challenges was making sure that the site worked well on mobile and adapted to a bunch of different screen sizes. I used mostly %-based div sizes so they would scale well, and made use of collapsing grids into single-column structures when the viewport was too small. All fonts got scaled down, and the biggest challenge of all was to get the navbar working as a hamburger menu.
+            </p>
+            <p>
+                I followed a <a href = "https://www.youtube.com/watch?v=flItyHiDm7E">tutorial</a> on how to do so, and once I went over and reread the code a couple of times to ensure I actually understood what all of it was doing, I modified it to fit my needs. The changes I made include the way the hamburger menu slides open, the way the buttons are formatted, and a couple of tweaks so that the top navbar wouldn't disappear when I scrolled down. 
+            </p>
+            <p>
+                There were a lot of small issues with padding/margins as I scaled things down, so fixing those involved a lot of trial and error. But after the site was mostly working the way I wanted it to, I simply filled in all the placeholders with actual content.
+            </p>
+
+            <h3>POLISH</h3>
+            <p>
+                To polish things up, I added a simple load-in animation, some basic parallax effectson the title, and tweaked the fonts/colours many, MANY times until it looked satisfactory. I added some hover filter effects so t hat hovering over buttons would make other divs apply/remove a filter through jQuery. I also added some more shadows for dimension, played around with the idea of having a div following the cursor (but that was very laggy), and I called it done :)
+            </p>
+        </div>
+    </body>
+</html>
